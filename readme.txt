@@ -38,7 +38,7 @@ In WooCommerce Sidebar Menu, there will be a new submenu link called 'Product Ba
 
 == Installation ==
 
-1. Upload `woocommerce-product-badges` to the `/wp-content/plugins/` directory
+1. Upload `woocommerce-product-badge` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. You can enable 'New, Sale' and 'Featured' option.
 4. Define how 'New' products must be (in days) to receive the 'New' badge on the shop and product page.
