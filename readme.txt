@@ -13,6 +13,29 @@ Displays 'New', 'Sale' and 'Featured' badge on WooCommerce products.
 
 A WooCommerce plugin that let you display 'New', 'Sale' (Save %) and 'Featured' badge at shop and product page.
 
+In WooCommerce Sidebar Menu, there will be a new submenu link called 'Product Badge' where you can:
+
+*   Enabled / Disabled the plugin
+*   Show "New" Badge
+*   New Product with How Many Days?
+*   Show "Sale" Badge
+*   Show "Featured" Badge
+
+= Features =
+
+*   Displays 'New', 'Sale' and 'Featured' badge on WooCommerce products.
+*   2 languages available : English UK (en_GB) and Chinese (zh_CN)
+
+= IMPORTANT NOTES =
+
+*   If you need to add new language file, do use POEdit and open 'wc-product-badge.pot' file and save the file as wc-product-badge-[language code].po, then put that into languages folder for this plugin.
+
+= Most Popular Plugins by Terry Tsang =
+
+*   [WooCommerce Custom Checkout Options](http://terrytsang.com/shop/shop/woocommerce-custom-checkout-options/)
+*   [WooCommerce Social Buttons PRO](http://terrytsang.com/shop/shop/woocommerce-social-buttons-pro/)
+*   [WooCommerce Extra Fee Option](http://terrytsang.com/shop/shop/woocommerce-extra-fee-option-pro/)
+
 == Installation ==
 
 1. Upload `woocommerce-product-badges` to the `/wp-content/plugins/` directory
