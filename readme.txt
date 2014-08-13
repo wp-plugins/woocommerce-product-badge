@@ -3,7 +3,7 @@ Contributors: terrytsang
 Tags: woocommerce, ecommerce, product, new, sale, featured, badge
 Requires at least: 3.8.1
 Tested up to: 3.9.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,7 @@ A WooCommerce plugin that let you display 'New', 'Sale' (Save %) and 'Featured' 
 In WooCommerce Sidebar Menu, there will be a new submenu link called 'Product Badge' where you can:
 
 *   Enabled / Disabled the plugin
+*   Display Position (Product Page)
 *   Show "New" Badge
 *   New Product with How Many Days?
 *   Show "Sale" Badge
@@ -34,7 +35,7 @@ In WooCommerce Sidebar Menu, there will be a new submenu link called 'Product Ba
 
 *   [WooCommerce Custom Checkout Options](http://terrytsang.com/shop/shop/woocommerce-custom-checkout-options/)
 *   [WooCommerce Social Buttons PRO](http://terrytsang.com/shop/shop/woocommerce-social-buttons-pro/)
-*   [WooCommerce Extra Fee Option](http://terrytsang.com/shop/shop/woocommerce-extra-fee-option-pro/)
+*   [WooCommerce Extra Fee Option PRO](http://terrytsang.com/shop/shop/woocommerce-extra-fee-option-pro/)
 
 == Installation ==
 
@@ -68,7 +69,13 @@ function remove_product_badge_styles() {
 
 4. The mobile layout for product page.
 
+5. The product badge/label shown "After Product Price" as Display Position option.
+
 == Changelog ==
+
+= 1.0.1 =
+*   Fixed undefined variable bugs
+*   Add new option "Display Position (Product Page)" to set priority of badges on woocommerce_single_product_summary
 
 = 1.0.0 =
 Initial release.

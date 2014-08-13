@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Product Badge v1.0.0\n"
+"Project-Id-Version: WooCommerce Product Badge v1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-08-03 08:34:03+0000\n"
+"PO-Revision-Date: 2014-08-13 15:08:11+0000\n"
 "Last-Translator: admin <terrytsang811@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,100 +19,125 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: wc-product-badge.php:160
+#: wc-product-badge.php:185
 #@ wc-product-badge
 msgid "Product Badge"
 msgstr ""
 
-#: wc-product-badge.php:192
+#: wc-product-badge.php:217
 #@ wc-product-badge
 msgid "You have saved WooCommerce Product Badge options."
 msgstr ""
 
-#: wc-product-badge.php:239
+#: wc-product-badge.php:264
 #@ default
 msgid "Settings"
 msgstr ""
 
-#: wc-product-badge.php:244
+#: wc-product-badge.php:269
 #@ wc-product-badge
 msgid "Enable"
 msgstr ""
 
-#: wc-product-badge.php:251
+#: wc-product-badge.php:290
 #@ wc-product-badge
 msgid "Show \"New\" Badge"
 msgstr ""
 
-#: wc-product-badge.php:258
-#@ wc-product-badge
-msgid "Custom New Badge Text"
-msgstr ""
-
-#: wc-product-badge.php:264
+#: wc-product-badge.php:297
 #@ wc-product-badge
 msgid "New Product with How Many Days?"
 msgstr ""
 
-#: wc-product-badge.php:270
+#: wc-product-badge.php:303
 #@ wc-product-badge
 msgid "Show \"Sale\" Badge"
 msgstr ""
 
-#: wc-product-badge.php:277
+#: wc-product-badge.php:310
 #@ wc-product-badge
 msgid "Show \"Featured\" Badge"
 msgstr ""
 
-#: wc-product-badge.php:288
+#: wc-product-badge.php:321
 #@ wc-product-badge
 msgid "Save Options"
 msgstr ""
 
-#: wc-product-badge.php:300
+#: wc-product-badge.php:333
 #@ wc-product-badge
 msgid "Donate $10, $20 or $30"
 msgstr ""
 
-#: wc-product-badge.php:301
+#: wc-product-badge.php:334
 #@ wc-product-badge
 msgid "If you like this plugin and find it is helpful, consider supporting it by donating a token of your appreciation."
 msgstr ""
 
-#: wc-product-badge.php:312
+#: wc-product-badge.php:345
 #@ wc-product-badge
 msgid "Donate with PayPal"
 msgstr ""
 
-#: wc-product-badge.php:317
+#: wc-product-badge.php:350
 #@ wc-product-badge
 msgid "Some other ways to support this plugin"
 msgstr ""
 
-#: wc-product-badge.php:319
+#: wc-product-badge.php:352
 #, php-format
 #@ wc-product-badge
 msgid "Leave a %s review on WordPress.org"
 msgstr ""
 
-#: wc-product-badge.php:320
+#: wc-product-badge.php:353
 #@ wc-product-badge
 msgid "Link to the plugin page from your blog"
 msgstr ""
 
-#: wc-product-badge.php:322
+#: wc-product-badge.php:355
 #@ wc-product-badge
 msgid "Vote \"works\" on the WordPress.org plugin page"
 msgstr ""
 
-#: wc-product-badge.php:327
+#: wc-product-badge.php:360
 #@ wc-product-badge
 msgid "Looking for support?"
 msgstr ""
 
-#: wc-product-badge.php:328
+#: wc-product-badge.php:361
 #, php-format
 #@ wc-product-badge
 msgid "Please use the %splugin support forums%s on WordPress.org."
+msgstr ""
+
+#: wc-product-badge.php:62
+#@ wc-product-badge
+msgid "Default"
+msgstr ""
+
+#: wc-product-badge.php:62
+#@ wc-product-badge
+msgid "After Product Title"
+msgstr ""
+
+#: wc-product-badge.php:62
+#@ wc-product-badge
+msgid "After Product Price"
+msgstr ""
+
+#: wc-product-badge.php:62
+#@ wc-product-badge
+msgid "After Short Desc"
+msgstr ""
+
+#: wc-product-badge.php:62
+#@ wc-product-badge
+msgid "After SKU,Categories & Tags"
+msgstr ""
+
+#: wc-product-badge.php:276
+#@ wc-product-badge
+msgid "Display Position (Product Page)"
 msgstr ""
 

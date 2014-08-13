@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Product Badge
 Plugin URI: http://terrytsang.com/shop/shop/woocommerce-product-badge/
 Description: Displays 'new', 'sale' and 'featured' badge on WooCommerce products.
-Version: 1.0.0
+Version: 1.0.1
 Author: Terry Tsang
 Author URI: http://shop.terrytsang.com
 */
@@ -52,13 +52,15 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 				
 				$this->options_product_badge = array(
 					'product_badge_enabled' => '',
+					'product_badge_display_position' => '',
 					'product_badge_enabled_new' => '',
-					//'product_badge_new_text' => __( 'New', $this->textdomain ),
 					'product_badge_new_days' => '30',
 					'product_badge_enabled_sale' => '',
 					'product_badge_enabled_featured' => '',
 				);
-	
+
+				$this->display_positions = array( 'default' => __( 'Default', $this->textdomain ), 'after_title' => __( 'After Product Title', $this->textdomain ), 'after_price' => __( 'After Product Price', $this->textdomain ), 'after_short_desc' => __( 'After Short Desc', $this->textdomain ), 'after_meta' => __( 'After SKU,Categories & Tags', $this->textdomain ));
+
 				$this->saved_options_product_badge = array();
 				
 				add_action('woocommerce_init', array(&$this, 'init'));
@@ -85,19 +87,42 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 					//add_action( 'woocommerce_before_shop_loop_item_title', array( &$this, 'woocommerce_show_product_loop_badge_new' ), 30 ); 	// The new badge function
 					//add_action( 'woocommerce_after_shop_loop_item', array( &$this, 'woocommerce_show_product_loop_badge_new' ), 30 ); 	// The new badge function
 
+					//add sharing media at product summary page 
+					$default_position = get_option('product_badge_display_position');
+					
+					$position_index = 101;
+					switch($default_position)
+					{
+						case 'default':
+							$position_index = 101;
+							break;
+						case 'after_title':
+							$position_index = 8;
+							break;
+						case 'after_price':
+							$position_index = 15;
+							break; 
+						case 'after_short_desc':
+							$position_index = 30;
+							break;
+						case 'after_meta':
+							$position_index = 45;
+							break;
+					}
+
 					if( get_option('product_badge_enabled_new') ){
 						add_action( 'woocommerce_before_shop_loop_item', array( &$this, 'woocommerce_show_product_loop_badge_new' ), 30 ); 	// The new badge function
-						add_action( 'woocommerce_single_product_summary', array(&$this, 'woocommerce_show_product_loop_badge_new' ), 101 );
+						add_action( 'woocommerce_single_product_summary', array(&$this, 'woocommerce_show_product_loop_badge_new' ), $position_index );
 					}
 
 					if( get_option('product_badge_enabled_featured') ){
 						add_action( 'woocommerce_before_shop_loop_item', array( &$this, 'woocommerce_show_product_loop_badge_featured' ), 35 ); 	// The featured badge function
-						add_action( 'woocommerce_single_product_summary', array(&$this, 'woocommerce_show_product_loop_badge_featured' ), 102 );
+						add_action( 'woocommerce_single_product_summary', array(&$this, 'woocommerce_show_product_loop_badge_featured' ), $position_index );
 					}
 
 					if( get_option('product_badge_enabled_sale') ){
 						add_action( 'woocommerce_before_shop_loop_item', array( &$this, 'woocommerce_show_product_loop_badge_sale' ), 20 ); 
-						add_action( 'woocommerce_single_product_summary', array(&$this, 'woocommerce_show_product_loop_badge_sale' ), 100 );	// The sale badge function
+						add_action( 'woocommerce_single_product_summary', array(&$this, 'woocommerce_show_product_loop_badge_sale' ), $position_index );	// The sale badge function
 					}
 
 					
@@ -174,8 +199,8 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 					check_admin_referer( $this->textdomain );
 	
 					$this->saved_options_product_badge['product_badge_enabled'] = ! isset( $_POST['product_badge_enabled'] ) ? '1' : $_POST['product_badge_enabled'];
+					$this->saved_options_product_badge['product_badge_display_position'] = ! isset( $_POST['product_badge_display_position'] ) ? '' : $_POST['product_badge_display_position'];
 					$this->saved_options_product_badge['product_badge_enabled_new'] = ! isset( $_POST['product_badge_enabled_new'] ) ? '1' : $_POST['product_badge_enabled_new'];
-					//$this->saved_options_product_badge['product_badge_new_text'] = ! isset( $_POST['product_badge_new_text'] ) ? __('New', $this->textdomain) : $_POST['product_badge_new_text'];
 					$this->saved_options_product_badge['product_badge_new_days'] = ! isset( $_POST['product_badge_new_days'] ) ? '30' : $_POST['product_badge_new_days'];
 					$this->saved_options_product_badge['product_badge_enabled_sale'] = ! isset( $_POST['product_badge_enabled_sale'] ) ? '1' : $_POST['product_badge_enabled_sale'];
 					$this->saved_options_product_badge['product_badge_enabled_featured'] = ! isset( $_POST['product_badge_enabled_featured'] ) ? '1' : $_POST['product_badge_enabled_featured'];
@@ -193,8 +218,8 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 				}
 			
 				$product_badge_enabled			= get_option( 'product_badge_enabled' );
+				$product_badge_display_position	= get_option( 'product_badge_display_position' );
 				$product_badge_enabled_new		= get_option( 'product_badge_enabled_new' );
-				//$product_badge_new_text	= get_option( 'product_badge_new_text' ) ? get_option( 'product_badge_new_text' ) : __('New', $this->textdomain);
 				$product_badge_new_days	= get_option( 'product_badge_new_days' ) ? get_option( 'product_badge_new_days' ) : '30';
 				$product_badge_enabled_sale	= get_option( 'product_badge_enabled_sale' );
 				$product_badge_enabled_featured	= get_option( 'product_badge_enabled_featured' );
@@ -248,18 +273,26 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 									</td>
 								</tr>
 								<tr valign="top">
+									<th scope="row" width="35%"><?php _e( 'Display Position (Product Page)', $this->textdomain ); ?></td>
+									<td>
+										<select name="product_badge_display_position">
+										<?php foreach($this->display_positions as $option => $option_name): ?>
+											<?php if($option == $product_badge_display_position): ?>
+												<option selected="selected" value="<?php echo $option; ?>"><?php echo $option_name; ?></option>
+											<?php else: ?>
+												<option value="<?php echo $option; ?>"><?php echo $option_name; ?></option>
+											<?php endif; ?>
+										<?php endforeach; ?>
+										</select>
+									</td>
+								</tr>
+								<tr valign="top">
 									<th scope="row" width="35%"><?php _e( 'Show "New" Badge', $this->textdomain ); ?></td>
 									<td>
 										<input class="checkbox" name="product_badge_enabled_new" id="product_badge_enabled_new" value="0" type="hidden">
 										<input class="checkbox" name="product_badge_enabled_new" id="product_badge_enabled_new" value="1" type="checkbox" <?php echo $checked_enabled_new; ?>>
 									</td>
 								</tr>
-								<!-- <tr valign="top">
-									<th scope="row" width="35%"><?php _e( 'Custom New Badge Text', $this->textdomain ); ?></td>
-									<td>
-										<input name="product_badge_new_text" type="text" id="product_badge_new_text" value="<?php echo $product_badge_new_text; ?>" />
-									</td>
-								</tr> -->
 								<tr valign="top">
 									<th scope="row" width="35%"><?php _e( 'New Product with How Many Days?', $this->textdomain ); ?></td>
 									<td>
