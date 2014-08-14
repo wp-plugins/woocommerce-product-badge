@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Product Badge
 Plugin URI: http://terrytsang.com/shop/shop/woocommerce-product-badge/
 Description: Displays 'new', 'sale' and 'featured' badge on WooCommerce products.
-Version: 1.0.1
+Version: 1.0.2
 Author: Terry Tsang
 Author URI: http://shop.terrytsang.com
 */
@@ -56,7 +56,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 					'product_badge_enabled_new' => '',
 					'product_badge_new_days' => '30',
 					'product_badge_enabled_sale' => '',
-					'product_badge_enabled_featured' => '',
+					'product_badge_enabled_featured' => ''
 				);
 
 				$this->display_positions = array( 'default' => __( 'Default', $this->textdomain ), 'after_title' => __( 'After Product Title', $this->textdomain ), 'after_price' => __( 'After Product Price', $this->textdomain ), 'after_short_desc' => __( 'After Short Desc', $this->textdomain ), 'after_meta' => __( 'After SKU,Categories & Tags', $this->textdomain ));
@@ -152,7 +152,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 				$new_days 			= get_option( 'product_badge_new_days' ); 
 					//echo 'new days'.$new_days;
 				if( (time() - ( 60 * 60 * 24 * $new_days ) ) < $timestampposted ){
-					echo '<h3 class="product-badge product-badge-new">New</h3>';
+					echo '<h3 class="product-badge product-badge-new">'.__( 'New', $this->textdomain ).'</h3>';
 					//echo '<div class="ribbon-wrapper-green"><div class="ribbon-green">NEW</div></div>';
 				} 
 			}
@@ -161,7 +161,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 			function woocommerce_show_product_loop_badge_featured() {
 				global $product;
 				if($product->is_featured())
-					echo '<h3 class="product-badge product-badge-featured">Featured</h3>';
+					echo '<h3 class="product-badge product-badge-featured">'.__( 'Featured', $this->textdomain ).'</h3>';
 			}
 
 			// Display the Sale badge
@@ -173,7 +173,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 
 					$save_percentage = round((($regular_price - $sale_price) / $regular_price) * 100);
 					if($regular_price != '' && $save_percentage != '')
-						echo '<h3 class="product-badge product-badge-sale">Sale (Save '.$save_percentage.'%)</h3>';
+						echo '<h3 class="product-badge product-badge-sale">'.__( 'Sale', $this->textdomain ).' ('.__( 'Save', $this->textdomain ).' '.$save_percentage.'%)</h3>';
 				}
 			}
 			

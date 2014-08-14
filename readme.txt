@@ -3,7 +3,7 @@ Contributors: terrytsang
 Tags: woocommerce, ecommerce, product, new, sale, featured, badge
 Requires at least: 3.8.1
 Tested up to: 3.9.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,9 @@ function remove_product_badge_styles() {
 5. The product badge/label shown "After Product Price" as Display Position option.
 
 == Changelog ==
+
+= 1.0.2 =
+*   Make product label text "New", "Featured" and "Sale Save (%)" translateable 
 
 = 1.0.1 =
 *   Fixed undefined variable bugs

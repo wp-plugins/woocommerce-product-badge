@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Product Badge v1.0.1\n"
+"Project-Id-Version: WooCommerce Product Badge v1.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-08-13 15:13:03+0000\n"
+"PO-Revision-Date: 2014-08-14 23:32:12+0000\n"
 "Last-Translator: admin <terrytsang811@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgstr "最新产品是从几天算起？"
 #: wc-product-badge.php:303
 #@ wc-product-badge
 msgid "Show \"Sale\" Badge"
-msgstr "展示 \"折扣\" 标签"
+msgstr "展示 \"促销\" 标签"
 
 #: wc-product-badge.php:310
 #@ wc-product-badge
@@ -140,4 +140,24 @@ msgstr "SKU,分类及标签后"
 #@ wc-product-badge
 msgid "Display Position (Product Page)"
 msgstr "展示位置（产品页面）"
+
+#: wc-product-badge.php:155
+#@ wc-product-badge
+msgid "New"
+msgstr "最新"
+
+#: wc-product-badge.php:164
+#@ wc-product-badge
+msgid "Featured"
+msgstr "推荐"
+
+#: wc-product-badge.php:176
+#@ wc-product-badge
+msgid "Sale"
+msgstr "促销"
+
+#: wc-product-badge.php:176
+#@ wc-product-badge
+msgid "Save"
+msgstr "节省"
 
