@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Product Badge
 Plugin URI: http://terrytsang.com/shop/shop/woocommerce-product-badge/
 Description: Displays 'new', 'sale' and 'featured' badge on WooCommerce products.
-Version: 1.0.2
+Version: 1.0.3
 Author: Terry Tsang
 Author URI: http://shop.terrytsang.com
 */
@@ -25,11 +25,17 @@ Author URI: http://shop.terrytsang.com
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
+	exit;
+}
+
 // Define plugin name
 define('wc_plugin_name_product_badge', 'WooCommerce Product Badge');
 
 // Define plugin version
-define('wc_version_product_badge', '1.0.0');
+define('wc_version_product_badge', '1.0.3');
 
 
 // Checks if the WooCommerce plugins is installed and active.
@@ -333,7 +339,7 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 							<h3 class="plugin-title"><?php _e( 'Donate $10, $20 or $30', $this->textdomain ); ?></h3>
 							<p><?php _e( 'If you like this plugin and find it is helpful, consider supporting it by donating a token of your appreciation.', $this->textdomain ); ?></p>
 
-							<div class="plugin-donate">
+							<div class="plugin-donate" style="text-align:center">
 								<form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 									<input type="hidden" name="cmd" value="_donations">
 									<input type="hidden" name="business" value="terry@terrytsang.com">
@@ -346,6 +352,11 @@ if(in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_o
 									<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
 								</form>
 							</div>
+
+							<br /><div style="text-align:center;"><b>OR</b></div>
+
+							<p align="center"><a href="http://terrytsang.com/shop/shop/woocommerce-product-badge-pro/" target="_blank" title="WooCommerce Product Badge PRO"><img src="<?php echo plugins_url( 'assets/images/pro-version.png', __FILE__ ); ?>" border="0" /></a></p>
+						
 						
 							<p><?php _e( 'Some other ways to support this plugin', $this->textdomain ); ?></p>
 							<ul class="ul-square">

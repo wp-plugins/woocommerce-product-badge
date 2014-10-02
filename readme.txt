@@ -1,9 +1,10 @@
 === WooCommerce Product Badge ===
 Contributors: terrytsang
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=terry@terrytsang.com&item_name=Donation+for+TerryTsang+Wordpress+WebDev
 Tags: woocommerce, ecommerce, product, new, sale, featured, badge
 Requires at least: 3.8.1
-Tested up to: 3.9.1
-Stable tag: 1.0.2
+Tested up to: 4.0
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +31,14 @@ In WooCommerce Sidebar Menu, there will be a new submenu link called 'Product Ba
 = IMPORTANT NOTES =
 
 *   If you need to add new language file, do use POEdit and open 'wc-product-badge.pot' file and save the file as wc-product-badge-[language code].po, then put that into languages folder for this plugin.
+
+
+= GER PRO VERSION =
+
+[WooCommerce Product Badge PRO](http://terrytsang.com/shop/shop/woocommerce-product-badge-pro/)
+
+*Displays 'New', 'Sale, 'Featured', 'Sold Out' and 'Popular' badge with unit sold record option for WooCommerce products*
+
 
 = Most Popular Plugins by Terry Tsang =
 
@@ -72,6 +81,9 @@ function remove_product_badge_styles() {
 5. The product badge/label shown "After Product Price" as Display Position option.
 
 == Changelog ==
+
+= 1.0.3 =
+*   Added PRO Version that let you display 'New', 'Sale' (Save %), 'Featured', 'Sold Out' and 'Popular' with unit sold option badge at shop and product page.
 
 = 1.0.2 =
 *   Make product label text "New", "Featured" and "Sale Save (%)" translateable 
