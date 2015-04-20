@@ -3,8 +3,8 @@ Contributors: terrytsang
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=terry@terrytsang.com&item_name=Donation+for+TerryTsang+Wordpress+WebDev
 Tags: woocommerce, ecommerce, product, new, sale, featured, badge
 Requires at least: 3.8.1
-Tested up to: 4.0
-Stable tag: 1.0.3
+Tested up to: 4.1.1
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,19 +32,24 @@ In WooCommerce Sidebar Menu, there will be a new submenu link called 'Product Ba
 
 *   If you need to add new language file, do use POEdit and open 'wc-product-badge.pot' file and save the file as wc-product-badge-[language code].po, then put that into languages folder for this plugin.
 
+= GET PRO VERSION =
+*   [WooCommerce Product Badge PRO](http://terrytsang.com/shop/shop/woocommerce-product-badge-pro/) - Display 'New', 'Sale' (Save %), 'Featured', 'Sold Out' and 'Popular' with Units Sold badge.
 
-= GER PRO VERSION =
+= In addition to these features, over 20 WooCommerce extensions are available: =
 
-[WooCommerce Product Badge PRO](http://terrytsang.com/shop/shop/woocommerce-product-badge-pro/)
+* [Facebook Share Like Button](http://terrytsang.com/shop/shop/woocommerce-facebook-share-like-button/) - add Facebook Share and Like button at product page.
+* [Custom Checkout Options](http://terrytsang.com/shop/shop/woocommerce-custom-checkout-options/) - implement customization for entire checkout process.
+* [Social Buttons PRO](http://terrytsang.com/shop/shop/woocommerce-social-buttons-pro/) - additional 9 social share buttons where you can engage more audience.
+* [Extra Fee Option PRO](http://terrytsang.com/shop/shop/woocommerce-extra-fee-option-pro/) - add multiple extra fee for any order with multiple options.
+* [Custom Product Tabs](http://terrytsang.com/shop/shop/woocommerce-custom-product-tabs/) - add multiple tabs to WooCommerce product page.
+* [Facebook Social Plugins](http://terrytsang.com/shop/shop/woocommerce-facebook-social-plugins/) - implement Facebook Social Plugins that let the users liked, commented or shared your site's contents.
+* [Custom Payment Method](http://terrytsang.com/shop/shop/woocommerce-custom-payment-method/) - customise the custom payment method with flexible options.
+* [Custom Shipping Method](http://terrytsang.com/shop/shop/woocommerce-custom-shipping-method/) - define own settings for custom shipping method.
+* [Donation/Tip Checkout](http://terrytsang.com/shop/shop/woocommerce-donation-tip-checkout/) - add donation/tip amount option for their customers at WooCommerce checkout page.
+* [Facebook Connect Checkout](http://terrytsang.com/shop/shop/woocommerce-facebook-login-checkout/) - implement Facebook Login so that new customers can sign in woocommerce site by using their Facebook account.
+* [Product Catalog](http://terrytsang.com/shop/shop/woocommerce-product-catalog/) - turn WooCommerce into a product catalog with a few clicks.
 
-*Displays 'New', 'Sale, 'Featured', 'Sold Out' and 'Popular' badge with unit sold record option for WooCommerce products*
-
-
-= Most Popular Plugins by Terry Tsang =
-
-*   [WooCommerce Custom Checkout Options](http://terrytsang.com/shop/shop/woocommerce-custom-checkout-options/)
-*   [WooCommerce Social Buttons PRO](http://terrytsang.com/shop/shop/woocommerce-social-buttons-pro/)
-*   [WooCommerce Extra Fee Option PRO](http://terrytsang.com/shop/shop/woocommerce-extra-fee-option-pro/)
+and many more...
 
 == Installation ==
 

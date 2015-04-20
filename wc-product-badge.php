@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Product Badge
 Plugin URI: http://terrytsang.com/shop/shop/woocommerce-product-badge/
 Description: Displays 'new', 'sale' and 'featured' badge on WooCommerce products.
-Version: 1.0.3
+Version: 1.0.4
 Author: Terry Tsang
 Author URI: http://shop.terrytsang.com
 */
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define('wc_plugin_name_product_badge', 'WooCommerce Product Badge');
 
 // Define plugin version
-define('wc_version_product_badge', '1.0.3');
+define('wc_version_product_badge', '1.0.4');
 
 
 // Checks if the WooCommerce plugins is installed and active.
